@@ -4,10 +4,9 @@ var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
 //  response.send('Hello World 2!');
-  fs.readFile('/index.html', function (err, data) {
-  	if (err) throw err;
-  		response.send(data);
-   });
+	buf = new Buffer(256);
+	data = fs.readSync('index.html', buffer, 0, 100, 0);
+	 response.sen(data);
 
 });
 
