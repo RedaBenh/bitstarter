@@ -9,7 +9,7 @@ app.get('/', function(request, response) {
   		response.send(data);
    });
 */
- response.render('index.html');
+ response.render('/index.html');
 });
 
 var port = process.env.PORT || 5000;
